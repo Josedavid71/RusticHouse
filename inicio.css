@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.logo{
+    max-width: 150px;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: rgb(253, 253, 229);
+}
+.nav-list{
+    max-width: 900px;
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+.nav-list li a{
+    
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+}
+.abrir-menu{
+    display: none;
+}
+#cerrar{
+    display: none;
+}
+@media screen and (max-width: 700px) {
+    .abrir-menu{
+        display: block;
+        border: 0;
+        font-size: 40px;
+        background-color: transparent;
+        cursor: pointer;
+        color: black;
+    }
+    #cerrar{
+        display: block;
+        border: 0;
+        font-size: 40px;
+        background-color: transparent;
+        cursor: pointer;
+        color: beige;
+    }
+    .nav{
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: end;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgb(27, 25, 25);
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax (0, 0, 0, 10);
+    }
+    
+    .nav.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+    .nav-list{
+        flex-direction: column;
+        align-items: end;
+        
+    }
+    .nav-list li a{
+        color: beige;
+    }
+}
+#portada{
+    background-image: url(imagenesHoteles/pexels-flickr-149541.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+}
+#portada img{
+    margin-top: 200px;
+    max-width: 160px;
+}
+.letras{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+}
+.letras .fila1{
+    color: crimson;
+    font-weight: 400;
+    font-family: 'Pacifico', cursive;
+    
+}
+.letras .fila2{
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    margin-left: 10px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 20px;
+}
+.botones{
+    align-items: center;
+    margin-top: 40px;
+}
+.reservar{
+    
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.reservar a{
+    text-decoration: none;
+    color: black;
+}
+.explorar{
+    border-radius: 20px;
+    padding: 10px 50px;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: crimson;
+    color: white;
+    cursor: pointer;
+}
+.servicios {
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 48%;
+    padding-bottom: 40px;
+}
+.servicios .title {
+    position: relative;
+    font-size: 70px;
+    font-family: 'Pacifico', cursive;
+    font-weight: 300;
+    color: crimson;
+    text-align: center;
+    padding-top: 60px;
+    margin: 0 auto;
+}
+.cuadrantes, .cuadrantes2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.cuadrantes div, .cuadrantes2 div {
+    background-color: rgb(253, 253, 229);
+    margin: 20px;
+    position: relative;
+    border-radius: 30px;
+    flex: 1;
+    max-width: 400px;
+    text-align: center;
+    padding: 30px 20px 50px;
+    box-sizing: border-box; 
+}
+.cuadrantes img{
+    width: 100px;
+    height: auto;
+}
+.cuadro h4{
+    padding: 15px;
+    justify-content: space-between;
+}
+.cuadrantes2 img{
+    width: 100px;
+    height: auto;
+}
+.contacto{
+    background-image: url(imagenesHoteles/Arennas\ Mancora\ —\ Peru.jpeg);
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    color: white;
+}
+.contenido h2{
+    font-size: 80px;
+    font-family: 'Pacifico', cursive;
+}
+.contenido h1{
+    font-size: 100px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.contenido p{
+margin-left: 20%;
+margin-right: 20%;
+}
+.redes{
+    background-color: rgb(253, 253, 229);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.redes h4{
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+    text-align: center;
+    color: crimson;
+    margin: 0;
+}
+.redes a {
+    margin-left: 10px;
+}
+.redes a i{
+    color: crimson;
+    font-size: 40px;
+}
+@media screen and (max-width: 650px) {
+    .contacto h1{
+        font-size: 50px;
+    }
+    .redes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .redes a {
+        margin-top: 0; 
+        margin-bottom: 10px; 
+    }
+}

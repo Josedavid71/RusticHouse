@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.logo{
+    max-width: 150px;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #2C2F35;
+    font-size: 18px;
+}
+.nav-list{
+    max-width: 900px;
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+.nav-list li a{
+    
+    justify-content: center;
+    text-decoration: none;
+    color: rgb(253, 253, 229);
+}
+.abrir-menu{
+    display: none;
+}
+#cerrar{
+    display: none;
+}
+@media screen and (max-width: 700px) {
+    .abrir-menu{
+        display: block;
+        border: 0;
+        font-size: 40px;
+        background-color: transparent;
+        cursor: pointer;
+        color: beige;
+    }
+    #cerrar{
+        display: block;
+        border: 0;
+        font-size: 40px;
+        background-color: transparent;
+        cursor: pointer;
+        color: beige;
+    }
+    .nav{
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: end;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgb(27, 25, 25);
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax (0, 0, 0, 10);
+    }
+    
+    .nav.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+    .nav-list{
+        flex-direction: column;
+        align-items: end;
+        
+    }
+    .nav-list li a{
+        color: beige;
+    }
+}
+form{
+    width: 100%;
+    height: 100vh;
+    background-color: #2C2F35;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form{
+    width: 100%;
+    max-width: 450px;
+    background-color: rgb(253, 253, 229);
+    padding: 50px 60px 70px;
+    text-align: center;
+    border-radius: 25px;
+}
+.form h1{
+    font-size: 30px;
+    margin-bottom: 60px;
+    color: crimson;
+    position: relative;
+}
+.form h1::after{
+    content: "";
+    width: 30px;
+    height: 4px;
+    border-radius: 3px;
+    background: crimson;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.grupo{
+    background-color: white;
+    margin: 15px 0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    transition: max-height 0.5s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1)
+}
+input{
+    width: 100%;
+    position: relative;
+    background-color: transparent;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding:  18px 15px;
+    
+}
+input::placeholder{
+    color: #bfbbbb;
+}
+.grupo i{
+    margin-left: 15px;
+    color: crimson;
+}
+.botones{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+.botones button{
+    flex-basis: 48%;
+    font-size: 16px;
+    background-color: crimson;
+    color: white;
+    border: none;
+    height: 40px;
+    border-radius: 15px;
+    outline: 0;
+    cursor: pointer;
+    transition: backgraund 1s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.form{
+    height: 600px;
+}
+.botones button.desactivar{
+    background-color: white;
+    color: black;
+}
+.inicio a{
+    color: black;
+}
+.warnings{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: crimson;
+    padding-top: 30px;
+}
